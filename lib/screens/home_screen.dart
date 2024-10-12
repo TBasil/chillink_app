@@ -92,13 +92,37 @@ class _HomeScreenState extends State<HomeScreen> {
               ListTile(
                 title: Text('Contact', style: TextStyle(color: Colors.white)),
                 onTap: () {
-                  // Handle contact action
+                  showDialog(
+                      context: context,
+                      builder: (BuildContext context)
+                      {
+                        return AlertDialog(
+                          title: Text('Contact Us'),
+                          content: Text('Contaact us at ChillInk@gmail.com'),
+                          actions: [
+                            TextButton(
+                                onPressed: (){
+                                  Navigator.of(context).pop();
+                                }, child: Text('Thnkyou'),
+                            )
+                          ],
+                        );
+                      }
+                  );
                 },
               ),
               ListTile(
                 title: Text('Settings', style: TextStyle(color: Colors.white)),
                 onTap: () {
-                  // Handle settings action
+                  showDialog(
+                      context: context,
+                      builder: (BuildContext context)
+                      {
+                        return AlertDialog(
+                          title: Text('Coming Soon In Next Update'),
+                        );
+                      }
+                  );
                 },
               ),
             ],

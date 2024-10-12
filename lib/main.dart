@@ -16,6 +16,7 @@ class ChillInkApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: HomeScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

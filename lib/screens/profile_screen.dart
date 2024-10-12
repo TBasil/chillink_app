@@ -69,8 +69,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   Widget _buildProfileDetails() {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start, // Aligns to top-left
       children: [
+      // Profile Image at the top left
+      CircleAvatar(
+      radius: 50,
+      backgroundImage: AssetImage('assets/images/profile.jpg'),
+    ),
+    SizedBox(height: 20),
         Text('Welcome, $_savedUsername!', style: TextStyle(fontSize: 20)),
       ],
     );
