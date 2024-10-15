@@ -13,7 +13,7 @@ class User {
   Map<String, String> toMap() {
     return {
       'username': username,
-      'password': password, // not secure, but example for now
+      'password': password,
       'profileImage': profileImage,
     };
   }
